@@ -173,6 +173,15 @@ class LinkedList{
         }
         return result;
     }
+
+    static toString(head){
+        let result = '';
+        while(head){
+            result += head.data + ' ';
+            head = head.next;
+        }
+        return result;
+    }
 }
 
 
@@ -184,7 +193,10 @@ class Node{
     }
 }
 
-module.exports = LinkedList;
+module.exports = {
+    LinkedList,
+    Node
+};
 
 //使用
 /* let l = new LinkedList();
